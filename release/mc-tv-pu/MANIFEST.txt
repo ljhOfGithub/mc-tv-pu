@@ -1,0 +1,52 @@
+# 发布元数据
+release/mc-tv-pu/README.md
+release/mc-tv-pu/FROZEN_RESULT.json
+release/mc-tv-pu/MANIFEST.txt
+release/mc-tv-pu/LICENSE-CODE-MIT.txt
+release/mc-tv-pu/LICENSE-PAPER-CC-BY-4.0.md
+release/mc-tv-pu/THIRD_PARTY.md
+
+# 独立原创代码
+mc_tv_pu_release_validate.py
+generalization_audit.py
+mc_tv_pu_oracle.py
+mc_tv_pu_q_tau_semantics_audit.py
+mc_tv_pu_score_input_gate.py
+mc_tv_pu_selector_evaluation.py
+mc_tv_pu_source_crossfit_runner.py
+mc_tv_pu_source_isolated_runner.py
+mc_tv_pu_source_isolated_validation.py
+scaffold_cv_confirm.py
+source_balanced_pairwise_pilot.py
+figures/gen_fig_mc_tv_pu_overview.py
+
+# 行为测试
+tests/test_mc_tv_pu_release_validate.py
+tests/test_mc_tv_pu_oracle.py
+tests/test_mc_tv_pu_q_tau_semantics_audit.py
+tests/test_mc_tv_pu_score_input_gate.py
+tests/test_mc_tv_pu_selector_evaluation.py
+tests/test_mc_tv_pu_source_crossfit_runner.py
+tests/test_mc_tv_pu_source_isolated_runner.py
+tests/test_mc_tv_pu_source_isolated_validation.py
+
+# 环境与冻结协议
+requirements-audit.txt
+implement-stage/mc-tv-pu-oracle/CANDIDATE_MANIFEST.json
+implement-stage/mc-tv-pu-oracle/SPEC.md
+implement-stage/mc-tv-pu-oracle/ASSUMPTIONS.md
+implement-stage/mc-tv-pu-oracle/PROOF_AUDIT.md
+implement-stage/mc-tv-pu-oracle/PROOF_AUDIT.json
+docs/mc-tv-pu-selector-preanalysis.md
+docs/mc-tv-pu-frozen-score-input-audit.md
+docs/mc-tv-pu-source-isolated-coverage-audit.md
+docs/mc-tv-pu-novelty-boundary.md
+
+# 论文与原创图
+paper/main.tex
+paper/references.bib
+paper/Highlights.txt
+paper/figures/fig_mc_tv_pu_overview.pdf
+figures/fig_mc_tv_pu_overview.drawio
+figures/fig_mc_tv_pu_overview.pdf
+figures/fig_mc_tv_pu_overview.png

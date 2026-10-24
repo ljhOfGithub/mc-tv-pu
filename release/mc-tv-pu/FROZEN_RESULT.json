@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "result_package": "mc-tv-pu-clean-repro-memory-fix-20261021",
+  "pair_matrix_sha256": "2d5314944daf71aea5ecd13180fd7cb18936cd192882477c24f5ed873c8c4a73",
+  "implementation_source_sha256": {
+    "generalization_audit.py": "b5d2803a51d934419eeb0798dec2c2dd641b8ec2fc0e5ea2e1cbe46550b4e994",
+    "mc_tv_pu_oracle.py": "48695369a3f4c5e2b828f003bc488ea7e997894d190912dbcd559e62e461df2f",
+    "mc_tv_pu_q_tau_semantics_audit.py": "4d9e2ac50ccc2d5ebc665b6d64be12da8274144b13ab23e822114cf432d5fcd5",
+    "mc_tv_pu_score_input_gate.py": "0ebcc5f1ab5afe3d65c39bc434d23697bee605b33521a208e098c3eda340705d",
+    "mc_tv_pu_selector_evaluation.py": "4210bc8ff7e717fd3727752df6d585ef3847038b3fa93917e46eeb8a442169b3",
+    "mc_tv_pu_source_crossfit_runner.py": "010b52a6bd941f3e9c5a7d6652b576ccf7a69fdb99891c465e6a47fcb96df19e",
+    "mc_tv_pu_source_isolated_runner.py": "b6f71ac3a95aba0ee77b70fd8906d184815883013c971c91942be11fea1a5565",
+    "mc_tv_pu_source_isolated_validation.py": "b6299879e6d480aa1eb8653901a1e668b7679d26ede6f0a4c8735a7f2b1fb137",
+    "scaffold_cv_confirm.py": "e11765454fe4ac881ee819868e9104aa4a326f09f78eb0ea4a3d5aa549723c63",
+    "source_balanced_pairwise_pilot.py": "0e8e1f2b9eaa5826285ff940368df824b166d878b25c4df28d3a8daa2f5c15ae"
+  },
+  "selector": {
+    "directory": "selector-v3",
+    "log": "logs/selector-v3.log",
+    "checkpoint_count": 1212,
+    "run_config_sha256": "33af6dd73ef6a41a94fe4caf46e40292c70d769601b43d7891d97d7a64df0c62",
+    "candidate_intervals_sha256": "c20e1bbd8552cc5e19c4308c24f97325b25526d06d17b68b007b03c148eb1ca5",
+    "selector_summary_sha256": "4c26191027f34646fda95b7f3da1360dcd73a9c7bf3c079fca364a1e9d572f67",
+    "exit_log_sha256": "e6e5ac5402a07e42a6386677a9811a32cafb5db86d50709d93014e692f295da4",
+    "practical_selection_gate": "AT_LEAST_ONE_CELL_NARROWS_LIBRARY"
+  },
+  "crossfit": {
+    "directory": "source-crossfit-v1",
+    "log": "logs/source-crossfit-v1.log",
+    "summary_sha256": "ab51bab0ab942a30bd07b47a373b8c3f66cdb91a8c0f3c0a99598012fac503eb",
+    "artifact_count": 6,
+    "oracle_checkpoint_count": 1224,
+    "metric_checkpoint_count": 612,
+    "success_decision": "FAIL_RETAIN_AS_BOUNDARY_RESULT",
+    "selector_narrowed_at_least_one_cell": true,
+    "publication_coverage_passed": true,
+    "source_isolation_scope": "selector_anchors_only",
+    "target_drug_oof": true,
+    "selector_anchor_source_disjoint": true,
+    "base_model_source_disjoint": false
+  }
+}

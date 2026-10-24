@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_PRE_SCORE_EXPORT",
+  "frozen_at": "2026-10-21",
+  "historical_base_metrics_observed_before_freeze": true,
+  "mc_tv_pu_selector_outputs_observed_before_freeze": false,
+  "claim_boundary": "This is a selector-pre-freeze over an historically developed library, not a preregistration of the base-model development campaign.",
+  "dataset": {
+    "name": "Mi",
+    "pair_matrix": "Dataset/MiPair.npy",
+    "pair_matrix_sha256": "2d5314944daf71aea5ecd13180fd7cb18936cd192882477c24f5ed873c8c4a73",
+    "split_seed": 20261019,
+    "fold_count": 5,
+    "active_drug_count": 606,
+    "rna_candidate_count": 1805,
+    "expected_rows_per_candidate": 1093830
+  },
+  "inclusion_rule": "Union of every scorer in the pre-existing six-model Mi five-fold confirmation and every unique scorer family in the final protocol-matched Mi benchmark package; require five folds, split_seed 20261019, and all 606 active drugs; do not filter by AP.",
+  "seed_rule": "PLMF-MDA and sChemNET training seeds are separate seed-qualified candidates; no best-seed choice and no new score-averaging ensemble.",
+  "export_utility": {
+    "path": "mc_tv_pu_score_input_gate.py",
+    "sha256": "a59f94da79c046f40ee106c5397c77d71313dcb454e4995e1b533c0f3dfebd4f"
+  },
+  "input_artifacts": [
+    {
+      "path": "Dataset/MiPair_new.npy",
+      "sha256": "b7db79be2a402ca6ae454afb26a0aafda6ceaa1c6f71896dff3dea3ba8423660"
+    },
+    {
+      "path": "Dataset/MiRNA.pt",
+      "sha256": "25ad59b1dd3f0c820f4b60d529a4c22865b86266c936ef997ced2b481acd12e8"
+    },
+    {
+      "path": "Dataset/mi_drug_with_SMILES.csv",
+      "sha256": "8935ad486b4aa5cafd1d2e0690a5d964e75cac583bc733b4f9e6dfec873e7465"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "semantic",
+      "family": "native_confirmation",
+      "source_group": "native_confirmation",
+      "training_seed": null
+    },
+    {
+      "id": "semantic_ecfp",
+      "family": "native_confirmation",
+      "source_group": "native_confirmation",
+      "training_seed": null
+    },
+    {
+      "id": "propensity_residual",
+      "family": "native_confirmation",
+      "source_group": "native_confirmation",
+      "training_seed": null
+    },
+    {
+      "id": "ecfp_propensity_joint",
+      "family": "native_confirmation",
+      "source_group": "native_confirmation",
+      "training_seed": null
+    },
+    {
+      "id": "prior_offset_structural_residual",
+      "family": "native_confirmation",
+      "source_group": "native_confirmation",
+      "training_seed": null
+    },
+    {
+      "id": "concentration_adaptive_router",
+      "family": "native_confirmation",
+      "source_group": "native_confirmation",
+      "training_seed": null
+    },
+    {
+      "id": "rna_prior_only",
+      "family": "strong_prior",
+      "source_group": "strong_prior_and_final_candidate",
+      "training_seed": null
+    },
+    {
+      "id": "prior_preserving_pairwise_residual",
+      "family": "final_candidate",
+      "source_group": "strong_prior_and_final_candidate",
+      "training_seed": null
+    },
+    {
+      "id": "ncrdlg_localgl",
+      "family": "public_method_adaptation",
+      "source_group": "ncrdlg_localgl",
+      "training_seed": null
+    },
+    {
+      "id": "plmf_mda_strict_adapter@20261020",
+      "family": "public_method_adaptation",
+      "source_group": "plmf_mda",
+      "training_seed": 20261020
+    },
+    {
+      "id": "plmf_mda_strict_adapter@20261021",
+      "family": "public_method_adaptation",
+      "source_group": "plmf_mda",
+      "training_seed": 20261021
+    },
+    {
+      "id": "plmf_mda_strict_adapter@20261022",
+      "family": "public_method_adaptation",
+      "source_group": "plmf_mda",
+      "training_seed": 20261022
+    },
+    {
+      "id": "schemnet_no_seq_maccs@20261020",
+      "family": "public_method_adaptation",
+      "source_group": "schemnet_no_seq",
+      "training_seed": 20261020
+    },
+    {
+      "id": "schemnet_no_seq_maccs@20261021",
+      "family": "public_method_adaptation",
+      "source_group": "schemnet_no_seq",
+      "training_seed": 20261021
+    },
+    {
+      "id": "schemnet_no_seq_maccs@20261022",
+      "family": "public_method_adaptation",
+      "source_group": "schemnet_no_seq",
+      "training_seed": 20261022
+    }
+  ],
+  "source_groups": [
+    {
+      "family": "native_confirmation",
+      "source_run": "results/scaffold-five-fold-confirmation",
+      "eligibility_artifact": "results/scaffold-five-fold-confirmation/mi_full_candidate_drug_metrics.csv",
+      "eligibility_sha256": "f6f826b9378ef1dcef9b0dc83aa7d75d2116e0ca42c0252ce17ae5b2290fd3ca",
+      "config_artifact": "results/scaffold-five-fold-confirmation/mi_config.json",
+      "config_sha256": "2517bbc3dc6e9bda448529af1c7e2c4ced2dc57047af483b10961f0b4282406b",
+      "generator_script": "scaffold_cv_confirm.py",
+      "current_generator_sha256": "e11765454fe4ac881ee819868e9104aa4a326f09f78eb0ea4a3d5aa549723c63",
+      "original_generator_sha256": null,
+      "replay_status": "NEW_EXPORT_IMPLEMENTATION_FROZEN_NOT_RUN_ORIGINAL_SOURCE_MISSING",
+      "input_artifacts": [
+        {
+          "path": "Dataset/MiDrug.pt",
+          "sha256": "c453f62087b38f5639b6fd903a769006289b891d1bbdc9e58c97fe03a57681a6"
+        }
+      ],
+      "code_artifacts": [
+        {
+          "path": "generalization_audit.py",
+          "sha256": "b5d2803a51d934419eeb0798dec2c2dd641b8ec2fc0e5ea2e1cbe46550b4e994"
+        }
+      ],
+      "export_runtime_contract": {
+        "dataset": "Mi",
+        "dataset_dir": "Dataset",
+        "folds": 5,
+        "split_seed": 20261019,
+        "max_epochs": 120
+      }
+    },
+    {
+      "family": "strong_prior_and_final_candidate",
+      "source_run": "results/chemberta-pairwise-residual-pilot-20261019",
+      "eligibility_artifact": "results/chemberta-pairwise-residual-pilot-20261019/mi_full_candidate_drug_metrics.csv",
+      "eligibility_sha256": "07ca56f549b694a2a0c969f7c1605442786a6d47262a1557657b647360ee57eb",
+      "config_artifact": "results/chemberta-pairwise-residual-pilot-20261019/mi_config.json",
+      "config_sha256": "0019099adeb1d1f8697d45ac2bb994e0e9f25aa9e9307664451b6e5e8a603653",
+      "generator_script": "pairwise_prior_pilot.py",
+      "current_generator_sha256": "a7383d14b2f892d6df4ca07b278580f81d2bb8f1cdb91a35fa6bd54122937e5b",
+      "original_generator_sha256": null,
+      "replay_status": "NEW_EXPORT_IMPLEMENTATION_FROZEN_NOT_RUN_ORIGINAL_HASH_UNAVAILABLE",
+      "input_artifacts": [
+        {
+          "argument": "chemberta_features",
+          "path": ".cache/chemberta/mi_drug_features.npy",
+          "sha256": "d6fa1000154c8225065216251c8701c4ea0cf7917671ac7deb933cf0a25cb00e"
+        }
+      ],
+      "code_artifacts": [
+        {
+          "path": "generalization_audit.py",
+          "sha256": "b5d2803a51d934419eeb0798dec2c2dd641b8ec2fc0e5ea2e1cbe46550b4e994"
+        },
+        {
+          "path": "scaffold_cv_confirm.py",
+          "sha256": "e11765454fe4ac881ee819868e9104aa4a326f09f78eb0ea4a3d5aa549723c63"
+        }
+      ],
+      "export_runtime_contract": {
+        "dataset_dir": "Dataset",
+        "folds": 5,
+        "split_seed": 20261019,
+        "max_epochs": 120,
+        "learner": "pairwise",
+        "negative_mining": "uniform",
+        "drug_view": "chemberta"
+      }
+    },
+    {
+      "family": "ncrdlg_localgl",
+      "source_run": "results/ncrdlg-localgl-scaffold-resampling-sensitivity-20261020/aggregate",
+      "eligibility_artifact": "results/ncrdlg-localgl-scaffold-resampling-sensitivity-20261020/aggregate/mi_full_candidate_drug_metrics.csv",
+      "eligibility_sha256": "da845249f1cb2f2da77bac56c39fa65e65c47d8820cd327bd4b8264c4adb0c0b",
+      "config_artifact": "results/ncrdlg-localgl-scaffold-resampling-sensitivity-20261020/aggregate/mi_config.json",
+      "config_sha256": "841c748fd2d0107fbe935d7e063b594909df80942d14b870b5da53086bd097d0",
+      "generator_script": "ncrdlg_localgl_scaffold_cold.py",
+      "current_generator_sha256": "d86a2f887dca1c1e4e98af47c6cf8ce9c2a94d0153a344be6f03b622b0f3c50b",
+      "original_generator_sha256": null,
+      "replay_status": "NEW_EXPORT_IMPLEMENTATION_FROZEN_NOT_RUN_ORIGINAL_HASH_UNAVAILABLE",
+      "input_artifacts": [
+        {
+          "path": "Dataset/MiDrug.pt",
+          "sha256": "c453f62087b38f5639b6fd903a769006289b891d1bbdc9e58c97fe03a57681a6"
+        }
+      ],
+      "code_artifacts": [
+        {
+          "path": "generalization_audit.py",
+          "sha256": "b5d2803a51d934419eeb0798dec2c2dd641b8ec2fc0e5ea2e1cbe46550b4e994"
+        },
+        {
+          "path": "models.py",
+          "sha256": "ae7857f8a31004756e4476cdf73af58697196b685fccedd0b2557a5392be6ddb"
+        },
+        {
+          "path": "util_functions.py",
+          "sha256": "aade40d329f2191f332205d8ded986bacc572d8eb80e92ad3f7bc48ef40140ed"
+        },
+        {
+          "path": "scaffold_cv_confirm.py",
+          "sha256": "e11765454fe4ac881ee819868e9104aa4a326f09f78eb0ea4a3d5aa549723c63"
+        }
+      ],
+      "export_runtime_contract": {
+        "dataset_dir": "Dataset",
+        "folds": 5,
+        "split_seed": 20261019,
+        "epochs": 40,
+        "batch_size": 300,
+        "learning_rate": 0.01,
+        "hop": 3,
+        "max_nodes_per_hop": 100,
+        "max_train_pairs": null,
+        "training_graph_mode": "resample_each_epoch",
+        "device": "mps"
+      }
+    },
+    {
+      "family": "plmf_mda",
+      "source_run": "results/plmf-mda-strict-scaffold-baseline-20261020",
+      "eligibility_artifact": "results/plmf-mda-strict-scaffold-baseline-20261020/per_seed_per_drug_metrics.csv",
+      "eligibility_sha256": "962766e37ddad9525fb20115610ca629e60b008e45ea42a29310b2a2ce927d01",
+      "selection_artifact": "results/plmf-mda-strict-scaffold-baseline-20261020/validation_selection.csv",
+      "selection_sha256": "6353d6cf7ad8514eaa6e62ba7b559c9b99e487271702ee6d434357ab110b621f",
+      "config_artifact": "results/plmf-mda-strict-scaffold-baseline-20261020/run_config.json",
+      "config_sha256": "fc07ec826eb1d03246d616723bbad3ae3bbdf64dddfe93ee324cff285df4f4e0",
+      "generator_script": "plmf_mda_scaffold_baseline.py",
+      "current_generator_sha256": "cbf3ff2f66f7fcd7f3f6365e8542125fba49b47ce9b776631576aa70ad2ba602",
+      "original_generator_sha256": "a18394190c887a2d226043db821cbf2eb33008b63c1535311a9d53482054c228",
+      "replay_status": "NEW_EXPORT_IMPLEMENTATION_FROZEN_NOT_RUN_ORIGINAL_SOURCE_HASH_MISMATCH",
+      "input_artifacts": [
+        {
+          "argument": "rnafm_features",
+          "path": ".cache/plmf-mda/mi_rnafm_cls.npy",
+          "sha256": "703c71afa9ec275fb03474cf14dd3fd12bca297aa02b79638b7726a81ca201db"
+        },
+        {
+          "argument": "chemberta_features",
+          "path": ".cache/plmf-mda/mi_chemberta_cls.npy",
+          "sha256": "fc00f4d253ce1b7dd4ec8c87ddc8d4a8dd2e16d2bdf7513d6317a5968ab4a287"
+        },
+        {
+          "argument": "feature_manifest",
+          "path": ".cache/plmf-mda/feature_manifest.json",
+          "sha256": "167e5d45d5d5b969fc38b09f1632f10d4d8cba4fce769a944b425ba11c740212"
+        },
+        {
+          "path": "Dataset/miRNA_with_sequence.xlsx",
+          "sha256": "8c4857c774669aed3c92407fe68946d30a0ff54e5f17e4a27348c3ad505986e6"
+        }
+      ],
+      "code_artifacts": [
+        {
+          "path": "generalization_audit.py",
+          "sha256": "b5d2803a51d934419eeb0798dec2c2dd641b8ec2fc0e5ea2e1cbe46550b4e994"
+        },
+        {
+          "path": "rahgl_scaffold_cold_confirm.py",
+          "sha256": "592dfee931cab666d5a34039ccbdd89d15b8c8513fe4640808e9dcc7bf078c8f"
+        }
+      ],
+      "export_runtime_contract": {
+        "dataset_dir": "Dataset",
+        "rnafm_features": ".cache/plmf-mda/mi_rnafm_cls.npy",
+        "chemberta_features": ".cache/plmf-mda/mi_chemberta_cls.npy",
+        "feature_manifest": ".cache/plmf-mda/feature_manifest.json",
+        "folds": 5,
+        "fold_indices": null,
+        "split_seed": 20261019,
+        "training_seeds": [
+          20261020,
+          20261021,
+          20261022
+        ],
+        "max_epochs": 80,
+        "patience": 15,
+        "pair_batch_size": 32,
+        "device": "cpu",
+        "bootstrap_iterations": 20000
+      }
+    },
+    {
+      "family": "schemnet_no_seq",
+      "source_run": "results/schemnet-strict-scaffold-baseline-20261020",
+      "eligibility_artifact": "results/schemnet-strict-scaffold-baseline-20261020/per_seed_per_drug_metrics.csv",
+      "eligibility_sha256": "a79f1acd660c88c6264b5e252e0e6c9fb39310628f0ab711a504e99bd9fd7ebd",
+      "selection_artifact": "results/schemnet-strict-scaffold-baseline-20261020/validation_selection.csv",
+      "selection_sha256": "80461320e9e3f4d79ab8343560b45c23f9b5677899cadea97c86062277a18626",
+      "config_artifact": "results/schemnet-strict-scaffold-baseline-20261020/summary.json",
+      "config_sha256": "16e4ffb7a6fcdf4db0341d006fbbb1453eeb080896454e3ec2480c6504aec35b",
+      "generator_script": "schemnet_scaffold_baseline.py",
+      "current_generator_sha256": "1884e224d7b4c128ca24743605e9e2c59f1e7f81c05dd4dbdfdb4983bcffa275",
+      "original_generator_sha256": null,
+      "replay_status": "NEW_EXPORT_IMPLEMENTATION_FROZEN_NOT_RUN_ORIGINAL_HASH_UNAVAILABLE",
+      "code_artifacts": [
+        {
+          "path": "generalization_audit.py",
+          "sha256": "b5d2803a51d934419eeb0798dec2c2dd641b8ec2fc0e5ea2e1cbe46550b4e994"
+        },
+        {
+          "path": "rahgl_scaffold_cold_confirm.py",
+          "sha256": "592dfee931cab666d5a34039ccbdd89d15b8c8513fe4640808e9dcc7bf078c8f"
+        }
+      ],
+      "export_runtime_contract": {
+        "dataset_dir": "Dataset",
+        "folds": 5,
+        "fold_indices": null,
+        "split_seed": 20261019,
+        "training_seeds": [
+          20261020,
+          20261021,
+          20261022
+        ],
+        "max_epochs": 120,
+        "patience": 20,
+        "device": "cpu",
+        "bootstrap_iterations": 20000
+      }
+    }
+  ],
+  "excluded_sources": [
+    {
+      "source": "results/rahgl-scaffold-cold-confirmation-20261020",
+      "reason": "Different RAHGL candidate universe, 197 active drugs, and split_seed 20261020."
+    },
+    {
+      "source": "results/hmvcc-*",
+      "reason": "Different datasets and candidate universes."
+    },
+    {
+      "source": "results/*confirmation-seed-20261020",
+      "reason": "Duplicate scorer families under a different outer split seed."
+    },
+    {
+      "source": "results/*pilot* and results/*smoke* outside the named final candidate run",
+      "reason": "Exploratory or incomplete runs were not part of the final matched Mi benchmark package."
+    }
+  ],
+  "required_score_artifact": {
+    "path": null,
+    "sha256": null,
+    "layout": "partitioned_parquet_zstd_by_model_and_fold",
+    "columns": [
+      "model",
+      "fold",
+      "drug_id",
+      "rna_id",
+      "score"
+    ],
+    "expected_candidate_count": 15,
+    "expected_rows_per_candidate": 1093830,
+    "status": "MISSING"
+  }
+}

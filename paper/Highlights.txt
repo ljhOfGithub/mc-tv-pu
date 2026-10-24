@@ -1,0 +1,4 @@
+Compatible PU constraints couple class priors with positive distributions.
+Certified minimax regret returns sets from a frozen ranker library.
+A four-point construction proves a decision reversal under relaxation.
+Cross-source AP testing fails, defining a reproducible boundary result.

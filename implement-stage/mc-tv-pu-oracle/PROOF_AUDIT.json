@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-22T20:19:30Z",
+  "verdict": "PASS",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "reviewer_model": "gpt-6-astra",
+  "theorem_count": 1,
+  "fatal_count": 0,
+  "critical_count": 0,
+  "major_count": 0,
+  "minor_count": 3,
+  "closed_minor_count": 3,
+  "claim": "For the fixed four-point instance and candidate library exactly {A,B}, the compatible minimax-regret selector chooses A while the matched prior-clipped rectangular relaxation chooses B.",
+  "supported_values": {
+    "compatible": ["3/5", "2/3"],
+    "matched_rectangular": ["14/15", "2/3"]
+  },
+  "input_sha256": {
+    "implement-stage/mc-tv-pu-oracle/NONTRIVIAL_SEPARATION.md": "59149316ab87ceb44fd5ee9dd0d0d3a1257bfa00ee9a2cfabaa781f113d20ace",
+    "implement-stage/mc-tv-pu-oracle/PROOF_SKELETON.md": "9abc94b056bacc416994db8f895fa82cdacc6dd341d3fa3bec4977a6feebdcba",
+    "mc_tv_pu_oracle.py": "48695369a3f4c5e2b828f003bc488ea7e997894d190912dbcd559e62e461df2f",
+    "tests/test_mc_tv_pu_oracle.py": "b4d874ffcfd3327fe0f705814230a440aa2c2e9257cf1247fa04c663eaac6933",
+    "docs/mc-tv-pu-novelty-boundary.md": "3cfb3ecfa2b82dd446add421548134b78271d6d78ca4a0e41630df5f1c2bc6ee"
+  },
+  "issues": [
+    {"id": "PS-01", "status": "MINOR", "resolution": "closed"},
+    {"id": "PS-02", "status": "MINOR", "resolution": "closed"},
+    {"id": "PS-03", "status": "MINOR", "resolution": "closed"}
+  ],
+  "scope_limit": "Existence result only; no empirical advantage, population coverage, general-candidate reversal, complete oracle proof, or novelty guarantee."
+}

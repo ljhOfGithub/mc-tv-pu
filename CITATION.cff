@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this research artifact, please cite the software and the accompanying manuscript."
+title: "MC-TV-PU: Compatibility-Constrained Minimax-Regret Selection for Frozen PU Ranker Libraries"
+type: software
+authors:
+  - family-names: Li
+    given-names: Jihao
+repository-code: "https://github.com/ljhOfGithub/mc-tv-pu"
+url: "https://github.com/ljhOfGithub/mc-tv-pu"
+version: 1.0.0
+date-released: 2026-10-24
+license: MIT
