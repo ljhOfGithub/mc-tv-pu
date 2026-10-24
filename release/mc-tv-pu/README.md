@@ -44,5 +44,8 @@ python mc_tv_pu_release_validate.py \
 - 上游 ncRD-LG、数据、预训练模型、第三方分数与浏览器/审计轨迹不在这些授权内，
   详见 `THIRD_PARTY.md`。
 
-公开仓库和永久 DOI 尚未建立，因此本目录目前是本地可审查发布规范，不是已经公开
-发布的证明。
+公共仓库为 `https://github.com/ljhOfGithub/mc-tv-pu`。不可变 `v1.0.0` release
+位于 `https://github.com/ljhOfGithub/mc-tv-pu/releases/tag/v1.0.0`，指向提交
+`b57ab470de03bcb8ccb02bdbbe5ad5e45789020c`；附带源码归档 SHA-256 为
+`cf36b4056b702ff9a3ce32947a2ba13d441880339e05ccfeb83d5c797234b2c1`。
+该 release 没有 DOI，也不包含上游数据、score 分片、checkpoint 或第三方特征。

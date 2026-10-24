@@ -1,4 +1,4 @@
-4dfed5343606e8b25b6c8152806ed6638a26ace406bb4bad8dfb6817a8ac70e1  release/mc-tv-pu/README.md
+9820ab1d5b7e3eb6f06217fde9708023976f1ad282534fc04e881f12c8311b93  release/mc-tv-pu/README.md
 5c5a85199255a26a9b42b24071747b371e2a8ec8be9529ace7c4c6188d97e487  release/mc-tv-pu/FROZEN_RESULT.json
 016565f1656467b48f80e45acf0e65a439018b088cef0e68a8469ba7ffaf78cd  release/mc-tv-pu/MANIFEST.txt
 91f7ac31d15c2c499cfecb762d91ee938a9d2b9088616b076966195cc08b71bf  release/mc-tv-pu/LICENSE-CODE-MIT.txt
@@ -34,7 +34,7 @@ dc17b3508d2d3da3e667b14f1fa20eef60b6e5f7fb7f57425b310f96a165f03c  implement-stag
 c2bebac511060ba2ba8eef25b78a15c950417776c2a68500408f47ecd0479d55  docs/mc-tv-pu-frozen-score-input-audit.md
 8cc2f5bf89b61e27184e64ea964fac2d87e27c50b3d325052efd2b5f9ba45414  docs/mc-tv-pu-source-isolated-coverage-audit.md
 2a465e10a96d787dcbf4688327b30a0bcd73d2a36a2069407ae840d382ff5fb0  docs/mc-tv-pu-novelty-boundary.md
-9de5f2862a0447ef0076de545d74045d9dd68e7258b3861f39d7d9785ff37544  paper/main.tex
+1a13c173dca1a1ba3a6a06c374aff522fac173f939c0a934e7cbd7cab22f2ef2  paper/main.tex
 2b3261afc1bd4ea59c35299b67bb1cbe476e989896121bfeab08301ec7525029  paper/references.bib
 40dcd07ae365ebbedf759024e78db205ab2711c294992c81950849f547c4325c  paper/Highlights.txt
 334d2d3047de4e7780743b95f9bf911397957643b1b43b1de2d374084ebcf38d  paper/figures/fig_mc_tv_pu_overview.pdf
